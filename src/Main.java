@@ -1,15 +1,43 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        ArrayList<Student> students = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        Teacher teacher = new Teacher("고진영", "영어");
+        teacher.introduce();
+
+        Student s1 = new Student("이다연", 1408, 1111);
+        s1.setScore("수학", 96);
+        s1.setScore("컴구", 90);
+
+        Student s2 = new Student("김수인", 1401, 2222);
+        s1.setScore("수학", 95);
+        s1.setScore("컴구", 88);
+
+        students.add(s1);
+        students.add(s2);
+
+        System.out.println("\n성적 확인을 위해 이름과 학번을 입력해주세요:");
+        String inputName = scanner.nextLine();
+
+        System.out.println("비밀번호를 입력하세요:");
+        String inputPassword = scanner.nextLine();
+
+        boolean found = false;
+        for(Student student : students) {
+            if (student.hasName(inputName) && student.checkPassword(inputPassword)) {
+                student.introduce();
+                student.printScores();
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("이름이나 비밀번호가 틀렸습니다. 다시 한번 입력해주세요.");
         }
     }
 }
