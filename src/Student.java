@@ -1,11 +1,11 @@
 import java.util.HashMap;
 
 public class Student extends Person {
-    private int studentID;
+    private String studentID;
     private String password;
     private HashMap<String, Integer> scores = new HashMap<>();
 
-    public Student(String name, int studentID, String password) {
+    public Student(String name, String studentID, String password) {
         super(name);
         this.studentID = studentID;
         this.password = password;
@@ -16,7 +16,7 @@ public class Student extends Person {
     }
 
     public void printScores() {
-        System.out.println(name + "의 성적");
+        System.out.println(name + "학생의 성적");
         for(String subject : scores.keySet()) {
             System.out.println(subject + " : " + scores.get(subject));
         }
@@ -26,12 +26,16 @@ public class Student extends Person {
         return this.name.equalsIgnoreCase(inputName);
     }
 
+    public boolean hasID(String inputID) {
+        return this.studentID.equalsIgnoreCase(inputID);
+    }
+
     public boolean checkPassword(String inputPassword) {
         return this.password.equals(inputPassword);
     }
 
     @Override
     public void introduce() {
-        System.out.println("저는 학생 " + name + "입니다.");
+        System.out.println("학생 : " + name);
     }
 }
