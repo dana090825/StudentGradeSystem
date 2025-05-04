@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Teacher extends Person{
     private String subject;
     public String teacherEmail;
@@ -8,13 +10,19 @@ public class Teacher extends Person{
         this.teacherEmail = teacherEmail;
     }
 
-    public String printTeacherEmail() {
-        return teacherEmail;
-    }
-
-    public String getSubject() {
-        return subject;
-    }
+//    public int complaint(int complaintAnswer) {
+//        if (complaintAnswer == 1) {
+//            System.out.println(t1.teacherEmail());
+//        }
+//    }
+//
+//    public String printTeacherEmail() {
+//        return teacherEmail;
+//    }
+//
+//    public String getSubject() {
+//        return subject;
+//    }
 
     @Override
     public void introduce() {
