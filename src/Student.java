@@ -1,5 +1,7 @@
 import java.util.HashMap;
 
+import static jdk.vm.ci.hotspot.riscv64.RISCV64HotSpotRegisterConfig.t1;
+
 public class Student extends Person {
     private String studentID;
     private String password;
@@ -13,6 +15,12 @@ public class Student extends Person {
 
     public void setScore(String subject, int score) {
         scores.put(subject, score);
+    }
+
+    public int complaint(int complaintAnswer) {
+        if (complaintAnswer == 1) {
+            System.out.println(t1.teacherEmail());
+        }
     }
 
     public void printScores() {
@@ -36,6 +44,6 @@ public class Student extends Person {
 
     @Override
     public void introduce() {
-        System.out.println("학생 : " + name);
+        System.out.println("학생 : " + name + "\n");
     }
 }

@@ -6,8 +6,8 @@ public class Main {
         ArrayList<Student> students = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
-        Teacher teacher = new Teacher("고진영", "영어");
-        teacher.introduce();
+        Teacher t1 = new Teacher("고진영", "영어", "고진영theacher@gmail.com");
+        t1.introduce();
 
         Student s1 = new Student("이다연", "1408", "dlekdus8");
         s1.setScore("수학", 96);
