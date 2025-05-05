@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+//배열 사용을 위한 라이브러리
 import java.util.Scanner;
+//키보드 입력 받기를 위한 라이브러리
 
 public class Main {
     public static void main(String[] args) {
@@ -9,19 +11,19 @@ public class Main {
         Teacher t1 = new Teacher("이경희", "국어", "고은영theacher@gmail.com");
         t1.introduce();
 
-        Teacher t2 = new Teacher("고진영", "수학", "고진영teacher@gmail.com");
+        Teacher t2 = new Teacher("고진영", "수학", "고은영teacher@gmail.com");
         t2.introduce();
 
-        Teacher t3 = new Teacher("오상진", "과학", "고진영teacher@gmail.com");
+        Teacher t3 = new Teacher("오상진", "과학", "오상진teacher@gmail.com");
         t3.introduce();
 
-        Teacher t4 = new Teacher("민병욱, 권현진", "컴구", "고진영teacher@gmail.com");
+        Teacher t4 = new Teacher("민병욱, 권현진", "컴구", "민병욱teacher@gmail.com, 권현진teacher@gmail.com");
         t4.introduce();
 
-        Teacher t5 = new Teacher("전호연", "프밍", "고진영teacher@gmail.com");
+        Teacher t5 = new Teacher("전호연", "프밍", "전호연teacher@gmail.com");
         t5.introduce();
 
-        Teacher t6 = new Teacher("오정숙", "사회", "고진영teacher@gmail.com");
+        Teacher t6 = new Teacher("오정숙", "사회", "오정숙teacher@gmail.com");
         t6.introduce();
 
         Student s1 = new Student("이다연", "1408", "dlekdus8");

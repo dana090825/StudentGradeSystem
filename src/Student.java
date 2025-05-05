@@ -35,6 +35,7 @@ public class Student extends Person {
     }
 
     @Override
+    //override : 직접 구현한 것
     public void introduce() {
         System.out.println("학생 : " + name + "\n");
     }
