@@ -7,6 +7,7 @@ public class Student extends Person {
 
     public Student(String name, String studentID, String password) {
         super(name);
+        this.name = name;
         this.studentID = studentID;
         this.password = password;
     }
@@ -22,16 +23,8 @@ public class Student extends Person {
         }
     }
 
-    public boolean hasName(String inputName) {
-        return this.name.equalsIgnoreCase(inputName);
-    }
-
-    public boolean hasID(String inputID) {
-        return this.studentID.equalsIgnoreCase(inputID);
-    }
-
-    public boolean checkPassword(String inputPassword) {
-        return this.password.equals(inputPassword);
+    public boolean hasStudent(String inputName, String inputID, String inputPassword) {
+        return this.name.equalsIgnoreCase(inputName) && this.studentID.equalsIgnoreCase(inputID) && this.password.equalsIgnoreCase(inputPassword);
     }
 
     @Override

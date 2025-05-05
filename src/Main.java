@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ArrayList<Student> students = new ArrayList<>();
+        ArrayList<Teacher> teachers = new ArrayList<>();
         //왜 배열을 만들었을까?
         Scanner scanner = new Scanner(System.in);
         //Scanner 객체를 생성해서 사용자가 입력한 값을 넣기
@@ -14,21 +15,27 @@ public class Main {
         //변수로 여러 명의 선생님을 저장할 수 있음 - Person(추상클래스)에서 만들었던 introduce를 Teacher에 override
         Teacher t1 = new Teacher("이경희", "국어", "고은영theacher@gmail.com");
         t1.introduce();
+        teachers.add(t1);
 
         Teacher t2 = new Teacher("고진영", "수학", "고은영teacher@gmail.com");
         t2.introduce();
+        teachers.add(t2);
 
         Teacher t3 = new Teacher("오상진", "과학", "오상진teacher@gmail.com");
         t3.introduce();
+        teachers.add(t3);
 
         Teacher t4 = new Teacher("민병욱, 권현진", "컴구", "민병욱teacher@gmail.com, 권현진teacher@gmail.com");
         t4.introduce();
+        teachers.add(t4);
 
         Teacher t5 = new Teacher("전호연", "프밍", "전호연teacher@gmail.com");
         t5.introduce();
+        teachers.add(t5);
 
         Teacher t6 = new Teacher("오정숙", "사회", "오정숙teacher@gmail.com");
         t6.introduce();
+        teachers.add(t6);
 
         //<학생 정보를 입력>
         //학생 변수를 만들어 학생 정보를 입력하고 Student 클래스에 있는 setScore를 이용해 과목과 점수를 저장
@@ -94,7 +101,7 @@ public class Main {
             boolean found = false;
             //boolean 타입을 이용하여 본인인증 실패 문구 띄우기
             for(Student student : students) {
-                if (student.hasName(inputName) && student.hasID(inputID) && student.checkPassword(inputPassword)) {
+                if (student.hasStudent(inputName, inputID, inputPassword)) {
                 //만약 학생 이름, 학번, 비밀번호가 모두 일치하면
                     System.out.println("본인인증에 성공하셨습니다!\n");
                     student.introduce();
