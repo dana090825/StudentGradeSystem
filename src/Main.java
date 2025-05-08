@@ -57,34 +57,7 @@ public class Main {
         s2.setScore("프밍", 77);
         students.add(s2);
 
-//        Student s1 = new Student("김예담", "1402", "rladP");
-//        s1.setScore("수학", 96);
-//        s1.setScore("컴구", 90);
-//        s1.setScore("국어", 88);
-//        s1.setScore("과학", 90);
-//        s1.setScore("사회", 86);
-//        s1.setScore("프밍", 95);
-//        students.add(s1);
-//
-//        Student s1 = new Student("이다연", "1408", "dlekdus8");
-//        s1.setScore("수학", 96);
-//        s1.setScore("컴구", 90);
-//        s1.setScore("국어", 88);
-//        s1.setScore("과학", 90);
-//        s1.setScore("사회", 86);
-//        s1.setScore("프밍", 95);
-//        students.add(s1);
-//
-//        Student s1 = new Student("이다연", "1408", "dlekdus8");
-//        s1.setScore("수학", 96);
-//        s1.setScore("컴구", 90);
-//        s1.setScore("국어", 88);
-//        s1.setScore("과학", 90);
-//        s1.setScore("사회", 86);
-//        s1.setScore("프밍", 95);
-//        students.add(s1);
-
-        //재입력 및 재획인을 위해 while문을 사용해 반복
+        //재입력 및 재확인을 위해 while문을 사용해 반복
         while(true){
             System.out.println("\n성적 확인을 위해 학번을 입력해주세요:");
             String inputID = scanner.nextLine();
